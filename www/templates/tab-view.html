@@ -1,0 +1,23 @@
+<ion-view view-title="Violation List">	
+	<ion-nav-bar class="bar bar-positive">
+		<ion-nav-back-button></ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content ng-controller="violationDetailCtrl" class="padding">
+	<!-- <ion-refresher pulling-text="Pull to refresh" on-refresh="getAllPosts()"></ion-refresher> -->
+		<ion-list>	
+		  <ion-item class="item" ng-repeat="violation in listItems" on-double-tap="confirmDelete2(violation.studId)">
+		  	<h2>{{violation.student.firstname}} {{violation.student.middlename}} {{violation.student.lastname}}</h2>
+		    <p>{{violation.studId}}</p>
+		    <p>{{violation.minorviolation}}</p>
+		    <p>{{violation.majorviolation}}</p>
+		    <p>{{violation.customviolation}}</p>
+		    <p>{{violation.date}} {{violation.time}}</p>
+
+			<!-- <ion-option-button ng-click="confirmDelete(studId)" class="button button-calm" >
+	          Delete
+	        </ion-option-button>  -->
+		  </ion-item>
+
+		</ion-list>
+	</ion-content>
+</ion-nav-view>

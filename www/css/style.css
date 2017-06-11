@@ -1,1 +1,27 @@
 /* Empty. Add your own CSS if you like */
+.full-width {
+	width: 100%;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+p.caption {
+	white-space: pre-wrap !important;	
+}
+
+.pane {
+    background-image: url("../img/tcc1cut.jpg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.scroll-content{
+    background: url("../img/tcc1cut.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}

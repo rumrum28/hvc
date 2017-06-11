@@ -1,0 +1,81 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-assertive">
+		<h1 class="title">Add Violation</h1>
+		<button class="button button-icon ion-close-circled button-balanced" ng-click="modal1.hide()"></button>
+	</ion-header-bar>
+	<ion-content ng-controller="violationDetailCtrl" class="padding">
+		<div class="card">
+		<div class="list">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Student</span>
+					<input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete" autocomplete="on" max-selected-items="1" ng-model="student.studId" items-method="dropDown(query)" item-value-key="id" items-method-value-key="items" item-view-value-key="fullname" placeholder="Enter Name or ID here.." items-clicked-method="selectItem(callback)" ng-model-options="{debounce: 1000}" />
+				</label><br>
+			<div ng-if="student.studId">
+			      <div class="list">
+					  <label class="item item-input item-select">
+					    <div class="input-label">
+					      Minor Offence 
+					    </div>
+					    <select ng-model="student.minorviolation">
+					      <option>-Incomplete Uniform</option>
+					      <option>-Loitering in corridors while class</option>
+					      <option>-Littering</option>
+					      <option>-Going out in classroom w/out permission</option>
+					      <option>-Spitting</option>
+					      <option>-Noisy in Library</option>
+					      <option>-Unauthorized posting of posters</option>
+					      <option>-Vehicle w/out gatepass</option>
+					    </select>
+					  </label>
+					</div>
+					<div class="list">
+					  <label class="item item-input item-select">
+					    <div class="input-label">
+					      Major Offence
+					    </div>
+					    <select ng-model="student.majorviolation">
+					      <option>-Bringing alcoholic beverages</option>
+					      <option>-Bringing firearms</option>
+					      <option>-Possession of Drugs</option>
+					      <option>-Public immorality</option>
+					      <option>-Disrespect and threatening</option>
+					      <option>-Acts that degrades dignity</option>
+					      <option>-Extortion</option>
+					      <option>-Stealing</option>
+					      <option>-Vandalism</option>
+					      <option>-Damaging school properties</option>
+					      <option>-Gambling</option>
+					      <option>-Instigating illegal strikes</option>
+					      <option>-Disrupting classes</option>
+					      <option>-Selling examination papers</option>
+					      <option>-Falsely accusing</option>
+					      <option>-Lying during hearing on charges</option>
+					      <option>-Refusing to cooperate</option>
+					      <option>-Pornographic materials</option>
+					      <option>-Commiting scandals</option>
+					      <option>-Assaulting teachers</option>
+					      <option>-Assaulting another person</option>
+					      <option>-Hazing</option>
+					      <option>-Sexual misconduct</option>
+					      <option>-Tampering and Falsification</option>
+					      <option>-Deliberate defiance</option>
+					      <option>-Smoking</option>
+					      <option>-Unauthorize use facilities</option>
+					      <option>-Illegal Rallies</option>
+					      <option>-Making black Propagandas</option>
+					      <option>-Making unfounded petitions</option>
+					      <option>-Any forms of harassment</option>
+					      <option>-Any forms of boycotts</option>
+					    </select>
+					  </label>
+					</div>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Custom Violation :</span>
+						<textarea placeholder="leave this empty if not needed!!!" style="height: 200px" ng-model="student.customviolation"></textarea>
+					</label>
+				  <button class="button button-block button-balanced" ng-click="insertStudent( )">Confirm</button>
+			</div>
+		</div>
+		</div>
+	</ion-content>
+</ion-modal-view>
